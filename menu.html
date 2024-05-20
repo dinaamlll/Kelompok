@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Selamat Datang di Restoran Mie Ayam dan Bakso DLD</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="payment.html">Payment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="menu container">
+      <h2 class="text-center my-4">Menu</h2>
+      <!-- Search Bar -->
+      <div class="row mb-4">
+        <div class="col-md-12">
+          <input type="text" id="search" class="form-control" placeholder="Cari menu...">
+        </div>
+      </div>
+      <div class="row" id="menu-items">
+        <div class="col-md-4 mb-4 menu-item">
+          <div class="card">
+            <img src="bakso urat.jpg" class="card-img-top" alt="Bakso Urat">
+            <div class="card-body">
+              <h5 class="card-title">Bakso Urat</h5>
+              <p class="card-text">Harga: Rp. 47.000</p>
+              <button class="btn btn-success btn-order" data-item="Bakso Urat" data-price="18000">Pesan</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 menu-item">
+          <div class="card">
+            <img src="bakso telur.jpeg" class="card-img-top" alt="Bakso Telur">
+            <div class="card-body">
+              <h5 class="card-title">Bakso Telur</h5>
+              <p class="card-text">Harga: Rp. 40.000</p>
+              <button class="btn btn-success btn-order" data-item="Bakso Telur" data-price="16000">Pesan</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 menu-item">
+          <div class="card">
+            <img src="bakso jumbo.jpeg" class="card-img-top" alt="Bakso Jumbo">
+            <div class="card-body">
+              <h5 class="card-title">Bakso Jumbo</h5>
+              <p class="card-text">Harga: Rp. 55.000</p>
+              <button class="btn btn-success btn-order" data-item="Bakso Jumbo" data-price="20000">Pesan</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 menu-item">
+          <div class="card">
+            <img src="mie ayam+bakso.jpeg" class="card-img-top" alt="Mie Ayam+Bakso">
+            <div class="card-body">
+              <h5 class="card-title">Mie Ayam+Bakso</h5>
+              <p class="card-text">Harga: Rp. 60.000</p>
+              <button class="btn btn-success btn-order" data-item="Mie Ayam+Bakso" data-price="17000">Pesan</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 menu-item">
+          <div class="card">
+            <img src="mie ayam.jpg" class="card-img-top" alt="Mie Ayam">
+            <div class="card-body">
+              <h5 class="card-title">Mie Ayam</h5>
+              <p class="card-text">Harga: Rp. 38.000</p>
+              <button class="btn btn-success btn-order" data-item="Mie Ayam" data-price="15000">Pesan</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 menu-item">
+          <div class="card">
+            <img src="es teh.jpg" class="card-img-top" alt="Es Teh">
+            <div class="card-body">
+              <h5 class="card-title">Es Teh</h5>
+              <p class="card-text">Harga: Rp. 10.000</p>
+              <button class="btn btn-success btn-order" data-item="Es Teh" data-price="5000">Pesan</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 menu-item">
+          <div class="card">
+            <img src="es jeruk.jpeg" class="card-img-top" alt="Es Jeruk">
+            <div class="card-body">
+              <h5 class="card-title">Es Jeruk</h5>
+              <p class="card-text">Harga: Rp. 15.000</p>
+              <button class="btn btn-success btn-order" data-item="Es Jeruk" data-price="5000">Pesan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Keranjang belanja -->
+    <section class="container my-4">
+      <h3>Keranjang Belanja</h3>
+      <ul class="list-group" id="cart-items"></ul>
+      <div class="text-right my-3">
+        <h4>Total: Rp. <span id="cart-total">0</span></h4>
+        <button class="btn btn-primary" id="checkout-btn">Checkout</button>
+      </div>
+    </section>
+
+    <!-- Form untuk mengirim data ke halaman pembayaran -->
+    <form id="order-form" action="payment.html" method="GET" style="display:none;">
+      <input type="hidden" name="items" id="order-items">
+      <input type="hidden" name="total" id="order-total">
+    </form>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p>&copy; 2024 Pemesanan Makanan</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (tidak bisa digunakan tanpa jQuery) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Script untuk handle order -->
+  <script>
+    $(document).ready(function() {
+      let orderItems = [];
+      let totalPrice = 0;
+
+      $('.btn-order').click(function() {
+        const itemName = $(this).data('item');
+        const itemPrice = $(this).data('price');
+        
+        orderItems.push({name: itemName, price: itemPrice});
+        totalPrice += itemPrice;
+
+        // Update cart UI
+        $('#cart-items').append('<li class="list-group-item">' + itemName + ' - Rp. ' + itemPrice + '</li>');
+        $('#cart-total').text(totalPrice);
+
+        // Serialize the order items and total price
+        $('#order-items').val(JSON.stringify(orderItems));
+        $('#order-total').val(totalPrice);
+      });
+
+      $('#search').on('keyup', function() {
+        var value = $(this).val().toLowerCase();
+        $('#menu-items .menu-item').filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+        });
+      });
+
+      $('#checkout-btn').click(function() {
+        if (orderItems.length > 0) {
+          // Submit the form to payment page
+          $('#order-form').submit();
+        } else {
+          alert('Keranjang belanja Anda kosong.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
